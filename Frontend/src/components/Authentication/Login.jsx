@@ -7,7 +7,7 @@ import { useAuth } from './Auth';
 export const Login = () => {
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/user/get')
+        axios.get('https://e-commerce-platform-1trn.onrender.com/api/user/get')
             .then(res => setUserList(res.data))
             .catch(err => console.log(err))
     }, [])

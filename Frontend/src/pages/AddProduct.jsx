@@ -15,11 +15,11 @@ export const AddProduct = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (title != '' && image != '' && description != '' && price != null) {
-            let result = "http://localhost:3000/api/post/post" + "Electronics";
+            let result = "https://e-commerce-platform-1trn.onrender.com/api/post/post" + "Electronics";
             if (category == "Clothing") {
-                result = "http://localhost:3000/api/post/post" + "Clothing";
+                result = "https://e-commerce-platform-1trn.onrender.com/api/post/post" + "Clothing";
             } else if (category == "Jewels") {
-                result = "http://localhost:3000/api/post/post" + "Jewels";
+                result = "https://e-commerce-platform-1trn.onrender.com/api/post/post" + "Jewels";
             }
             await axios.post(result, {
                 "image": image,

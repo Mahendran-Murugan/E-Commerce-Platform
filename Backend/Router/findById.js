@@ -8,23 +8,21 @@ router.get("/get/:id", async (req, res) => {
   const params = req.params.id;
   const product = [];
   await axios
-    .get(
-      `http://localhost:${process.env.SERVER_PORT}/Electronics/get/${params}`
-    )
+    .get(`${process.env.SERVER_URL}/Electronics/get/${params}`)
     .then((r) =>
       r.data.length != 0
         ? product.push({ category: "Electronics", data: r.data })
         : false
     );
   await axios
-    .get(`http://localhost:${process.env.SERVER_PORT}/Jewels/get/${params}`)
+    .get(`${process.env.SERVER_URL}/Jewels/get/${params}`)
     .then((r) =>
       r.data.length != 0
         ? product.push({ category: "Jewels", data: r.data })
         : false
     );
   await axios
-    .get(`http://localhost:${process.env.SERVER_PORT}/Clothing/get/${params}`)
+    .get(`${process.env.SERVER_URL}/Clothing/get/${params}`)
     .then((r) =>
       r.data.length != 0
         ? product.push({ category: "Clothing", data: r.data })

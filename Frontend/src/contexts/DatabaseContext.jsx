@@ -18,7 +18,7 @@ export const DatabaseProvider = ({ children }) => {
 
   const FetchInfo = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/get/allProducts");
+      const response = await fetch("https://e-commerce-platform-1trn.onrender.com/api/get/allProducts");
       if (!response.ok) {
         throw new Error("Failed to fetch data!");
       }
@@ -40,7 +40,7 @@ export const DatabaseProvider = ({ children }) => {
 
   const FetchSingleProduct = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/Model/get/${id}`);
+      const response = await fetch(`https://e-commerce-platform-1trn.onrender.com/Model/get/${id}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch data!");

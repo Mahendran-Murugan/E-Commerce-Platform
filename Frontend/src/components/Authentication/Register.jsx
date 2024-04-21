@@ -10,7 +10,7 @@ export const Register = () => {
 
     const handleRegister = () => {
         try {
-            axios.post("http://localhost:3000/api/user/post", {
+            axios.post("https://e-commerce-platform-1trn.onrender.com/api/user/post", {
                 "name": user,
                 "password": pass,
             });
